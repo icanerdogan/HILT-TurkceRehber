@@ -1,4 +1,4 @@
-package com.example.hiltdemo
+package com.ibrahimcanerdogan.hiltdemo
 
 interface CarFunctions {
 

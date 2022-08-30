@@ -1,4 +1,4 @@
-package com.example.hiltdemo.util
+package com.ibrahimcanerdogan.hiltdemo.util
 
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.example.hiltdemo
+package com.ibrahimcanerdogan.hiltdemo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,6 +1,6 @@
-package com.example.hiltdemo
+package com.ibrahimcanerdogan.hiltdemo
 
-import com.example.hiltdemo.repository.CarRepository
+import com.ibrahimcanerdogan.hiltdemo.repository.CarRepository
 import javax.inject.Inject
 
 class CarFunctionsImpl @Inject constructor(private val carRepository: CarRepository): CarFunctions {

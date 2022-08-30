@@ -1,10 +1,9 @@
-package com.example.hiltdemo
+package com.ibrahimcanerdogan.hiltdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.hiltdemo.repository.CarRepository
-import com.example.hiltdemo.util.Car
+import com.ibrahimcanerdogan.hiltdemo.util.Car
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
