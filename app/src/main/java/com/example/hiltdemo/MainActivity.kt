@@ -3,6 +3,7 @@ package com.example.hiltdemo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.hiltdemo.repository.CarRepository
 import com.example.hiltdemo.util.Car
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var car: Car
     @Inject
-    lateinit var carFunctions: CarFunctions
+    lateinit var carFunctions: CarFunctionsImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +26,11 @@ class MainActivity : AppCompatActivity() {
         val name = car.getCareName()
         val batterySize = car.getBatterySize()
         val carFun = carFunctions.doDrive()
+        val addResult = carFunctions.insert()
 
         Log.d(TAG, name)
         Log.d(TAG, batterySize)
         Log.d(TAG, carFun)
+        Log.d(TAG, addResult.toString())
     }
 }
