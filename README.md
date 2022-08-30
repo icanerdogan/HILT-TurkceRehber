@@ -1,2 +1,1 @@
-# HILT-Tutorial
-Dependency injection with Hilt detailed tutorial.
+<h1 align="center"> HILT Türkçe Öğretici Rehber </h1>
