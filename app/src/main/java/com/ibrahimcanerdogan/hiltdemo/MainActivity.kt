@@ -13,8 +13,10 @@ class MainActivity : AppCompatActivity() {
         const val TAG = "MainActivity"
     }
 
+    /*
     @Inject
     lateinit var car: Car
+    */
     @Inject
     lateinit var carFunctions: CarFunctionsImpl
 
@@ -22,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val name = car.getCareName()
-        val batterySize = car.getBatterySize()
+        // val name = car.getCareName()
+        // val batterySize = car.getBatterySize()
         val carFun = carFunctions.doDrive()
         val addResult = carFunctions.insert()
 
-        Log.d(TAG, name)
-        Log.d(TAG, batterySize)
+        // Log.d(TAG, name)
+        // Log.d(TAG, batterySize)
         Log.d(TAG, carFun)
         Log.d(TAG, addResult.toString())
     }
