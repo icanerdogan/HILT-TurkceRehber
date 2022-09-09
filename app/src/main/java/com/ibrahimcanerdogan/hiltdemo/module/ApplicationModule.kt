@@ -3,6 +3,7 @@ package com.ibrahimcanerdogan.hiltdemo.module
 import android.content.Context
 import com.ibrahimcanerdogan.hiltdemo.qualifier.ApiKey
 import com.ibrahimcanerdogan.hiltdemo.qualifier.DatabaseName
+import com.ibrahimcanerdogan.hiltdemo.repository.UserRepositoryImpl
 import com.ibrahimcanerdogan.hiltdemo.util.DatabaseService
 import dagger.Module
 import dagger.Provides
@@ -33,5 +34,11 @@ object ApplicationModule {
     @Provides
     fun provideDatabaseService(@ApplicationContext context: Context): DatabaseService {
         return DatabaseService(context)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserRepository(@DatabaseName databaseName: String): UserRepositoryImpl {
+        return UserRepositoryImpl(databaseName)
     }
 }
