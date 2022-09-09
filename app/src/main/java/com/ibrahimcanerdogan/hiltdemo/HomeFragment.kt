@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.ibrahimcanerdogan.hiltdemo.databinding.FragmentHomeBinding
 import com.ibrahimcanerdogan.hiltdemo.qualifier.ApiKey
 import com.ibrahimcanerdogan.hiltdemo.ui.MainFragment
@@ -54,10 +55,11 @@ class HomeFragment(
 
         binding.textViewApi.text = apiKey
         binding.buttonHomeToMain.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()
+/*            activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.main_fragment_container, MainFragment::class.java, null)
                 ?.addToBackStack(TAG)
-                ?.commit()
+                ?.commit()*/
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMainFragment())
         }
 
         getDatabaseName()

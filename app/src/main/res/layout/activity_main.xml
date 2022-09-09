@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_fragment_container"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:name="com.ibrahimcanerdogan.hiltdemo.util.AppNavHostFragment"
+    app:navGraph="@navigation/base_nav">
 
 </androidx.fragment.app.FragmentContainerView>
