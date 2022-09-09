@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.ibrahimcanerdogan.hiltdemo.util.Car
+import com.ibrahimcanerdogan.hiltdemo.util.DatabaseService
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
     */
     @Inject
     lateinit var carFunctions: CarFunctionsImpl
+
+    @Inject
+    lateinit var databaseService: DatabaseService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

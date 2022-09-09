@@ -1,10 +1,13 @@
 package com.ibrahimcanerdogan.hiltdemo.module
 
+import android.content.Context
 import com.ibrahimcanerdogan.hiltdemo.qualifier.ApiKey
 import com.ibrahimcanerdogan.hiltdemo.qualifier.DatabaseName
+import com.ibrahimcanerdogan.hiltdemo.util.DatabaseService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -24,5 +27,11 @@ object ApplicationModule {
     @Provides
     fun provideApiKey(): String {
         return "zaCELgL.0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx"
+    }
+
+    @Singleton
+    @Provides
+    fun provideDatabaseService(@ApplicationContext context: Context): DatabaseService {
+        return DatabaseService(context)
     }
 }
